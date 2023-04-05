@@ -87,7 +87,12 @@ h1 {
  
  
  }
- 
+
+ p {
+   font-family: 'Quicksand',sans-serif;
+   padding:70px;
+
+ }
  
  * {
     text-align: center;
