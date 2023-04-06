@@ -10,32 +10,90 @@ var affirmations = ['I forgive myself and set myself free.', 'I believe I can be
     'I am full of energy and vitality and my mind is calm and peaceful.', 'Every day I am getting healthier and stronger.',
     'I honor my body by trusting the signals that it sends me.', 'I manifest perfect health by making smart choices.'];
 
+
+
+
 //VARIABLES
-var receiveMessageButton = document.querySelector('button')
-var affirmationButton = document.querySelector('#affirmation')
-var mantraButton = document.querySelector('#mantra')
+var receiveMessageButton = document.querySelector('button');
+var affirmationButton = document.querySelector('#affirmation');
+var mantraButton = document.querySelector('#mantra');
+var img = document.querySelector('.image');
+var messageBox = document.querySelector('#three');
+var deleteMessageButton = document.querySelector('#Delete-Message');
+var deleteMessageResponse = document.getElementById('deleted');
+var deleteMessageResponseButton = document.querySelector('#deleted');
+var affirmationMessage 
+var mantraMessage
+
+
+
 
 
 //EVENT LISTENERS
-receiveMessageButton.addEventListener('click',showNewMessage)
+receiveMessageButton.addEventListener('click',showNewMessage);
+deleteMessageButton.addEventListener('click',deleteMessage);
+deleteMessageResponseButton.addEventListener('click', deleteMessage);
 
-//FUNTIONS
 
+
+
+//FUNCTIONS
 function getRandomIndex(array) {
     return Math.floor(Math.random() * array.length);
 }
 
+
+
 function showNewMessage(){
-    var affirmationMessage = affirmations[getRandomIndex(affirmations)];
-    var mantraMessage = mantras[getRandomIndex(mantras)]
 
+    affirmationMessage = affirmations[getRandomIndex(affirmations)];
+    mantraMessage = mantras[getRandomIndex(mantras)];
+  
 if(document.getElementById('affirmation').checked){
-    return affirmationMessage
-} else {
-    return mantraMessage
+    messageBox.innerHTML = `<p>${affirmationMessage}</p>`
+    } else if(document.getElementById('mantra').checked) {
+    messageBox.innerHTML = `<p>${mantraMessage}</p>`
+  }
+   deleteMessageButton.classList.remove('hidden')
 }
 
 
-currentMessage = createMessage(affirmationMessage)
-currentMessage = createMessage(mantraMessage)
-}
+
+function deleteMessage() {
+  
+  if(messageBox.innerHTML === `<p>${affirmationMessage}</p>`){
+      for (var i = 0; i < affirmations.length; i++){
+        if (affirmations[i] === affirmationMessage) {
+          affirmations.splice(i, 1);    
+        }
+      }
+      console.log(affirmations)
+    } else if (messageBox.innerHTML === `<p>${mantraMessage}</p>`){
+      for (var i = 0; i < mantras.length; i++) {
+        if (mantras[i] === mantraMessage) {
+          mantras.splice(i,1);
+        }
+      }
+    }
+    showNewMessage();
+    deleteMessageResponse.classList.toggle('deleted');
+};
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
