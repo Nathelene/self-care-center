@@ -12,7 +12,7 @@ h1 {
     text-align: center;
     color: #ffffff;
     font-family: 'Quicksand', sans-serif;
- };
+ }
  
  
  h2 {
@@ -20,17 +20,13 @@ h1 {
     text-align: center;
     color: #ffffff;
     font-family: 'Quicksand', sans-serif;
- };
+ }
  
  
  html {
-    /* background: #134d71; fallback color */
     background: linear-gradient(#134d71,#78a7c6,#f7e4bf);
-    /* background-repeat: no-repeat; */
-    /* background-size: cover; */
-    /* width: 100%; */
     height: 100%;
- };
+ }
 
  img {
    
@@ -38,7 +34,7 @@ h1 {
     padding: 5px;
     width: 150px;
     height: 100px;
- };
+ }
 
  #one {
     background-color: #ffffff;
@@ -49,11 +45,11 @@ h1 {
     font-style: italic;
     font-family: 'Quicksand',sans-serif;
     font-size:13px;
- };
+ }
 
  #two {
     height:100px;
- };
+ }
  
  
  #three {
@@ -62,7 +58,7 @@ h1 {
     width:700px;
     height: 150px;
     border-radius:5px;
- };
+ }
 
 
  button {
@@ -71,37 +67,36 @@ h1 {
     border-radius:3px;
     width: 150px;
     font-size:13px;
- };
+ }
 
  #A-BUTTON {
- margin-right: 150px
- };
+ padding-right: 150px
+ }
  
  #button-text {
-    color:#ffffff
- };
+    color:#ffffff;
+ }
 
  p {
    font-family: 'Quicksand',sans-serif;
    padding:70px;
- };
+ }
  
  * {
     text-align: center;
-    /* background: linear-gradient(#134d71,#78a7c6,#f7e4bf) */
- };
+ }
 
  #Delete-Message {
    color: #ffffff;
    height: 50px;
    width: 200px;
    font-size: 15px;
- };
+ }
  
  .hidden {
    display: none;
- };
+ }
 
  .deleted {
    display:none;
- };
+ }
